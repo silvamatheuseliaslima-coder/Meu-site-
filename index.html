@@ -69,3 +69,140 @@
   <script src="script.js"></script>
 </body>
 </html>
+/* Estilo geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #F9FAFB;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #1E40AF;
+  color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Seção hero */
+.hero {
+  background: linear-gradient(135deg, #3B82F6, #60A5FA);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: white;
+  color: #1E40AF;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #E5E7EB;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  flex: 1 1 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.card h3 {
+  color: #1E40AF;
+  margin-bottom: 10px;
+}
+
+/* Formulário */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+form button {
+  background-color: #1E40AF;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #374AC1;
+}
+
+/* Rodapé */
+footer {
+  background-color: #1E3A8A;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+const form = document.getElementById('form-contato');
+const mensagem = document.getElementById('mensagem');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  mensagem.textContent = 'Mensagem enviada com sucesso!';
+  form.reset();
+});
